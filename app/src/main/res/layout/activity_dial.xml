@@ -4,7 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DialActivity">
+    tools:context=".DialActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/tv_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text/SMS Intent"
+        android:textSize="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_caller1"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/btn_caller1"
@@ -13,9 +28,11 @@
         android:text="John"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_text"
         app:layout_constraintBottom_toTopOf="@id/btn_caller2"
-        android:onClick="callPerson"/>
+        android:onClick="callPerson"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/lightGreen"/>
 
     <Button
         android:id="@+id/btn_caller2"
@@ -27,6 +44,8 @@
         app:layout_constraintTop_toBottomOf="@id/btn_caller1"
         app:layout_constraintBottom_toTopOf="@id/btn_caller3"
         android:onClick="callPerson"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/lightGreen"
         />
 
     <Button
@@ -39,5 +58,8 @@
         app:layout_constraintTop_toBottomOf="@id/btn_caller2"
         app:layout_constraintBottom_toBottomOf="parent"
         android:onClick="callPerson"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/lightGreen"
+        android:layout_marginBottom="80dp"
         />
 </android.support.constraint.ConstraintLayout>

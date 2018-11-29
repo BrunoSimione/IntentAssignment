@@ -4,7 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapActivity">
+    tools:context=".MapActivity"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/tv_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Map Intent"
+        android:textSize="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ddl_locations"
+        android:layout_marginTop="10dp"/>
 
     <Spinner
         android:id="@+id/ddl_locations"
@@ -12,17 +27,23 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_text"
+        app:layout_constraintBottom_toTopOf="@id/btn_location"
         >
     </Spinner>
 
     <Button
         android:id="@+id/btn_location"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Show Location!"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ddl_locations"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:onClick="openMapLocation"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/lightGreen"
+        android:layout_marginBottom="200dp"
         />
 </android.support.constraint.ConstraintLayout>
