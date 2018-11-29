@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AlarmActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background_min">
 
     <TimePicker
         android:id="@+id/tp_clock"
         android:layout_width="200dp"
         android:layout_height="320dp"
+        android:backgroundTint="@color/lightGreen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
