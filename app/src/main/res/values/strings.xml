@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IntentAssignment</string>
+    <string name="file_provider_authority" translatable="false">com.example.bruno.intentassignment.fileprovider</string>
+
+    <string-array name="location_array">
+        <item>Toronto</item>
+        <item>New York</item>
+        <item>Miami</item>
+        <item>London</item>
+    </string-array>
+
+</resources>
